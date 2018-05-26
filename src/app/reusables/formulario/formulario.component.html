@@ -1,0 +1,42 @@
+<form class="card" [formGroup]="formServicio" (ngSubmit)="submit()">
+  <div class="card-content">
+    <div class="content">
+      <h1>Servicio</h1>
+      <div class="field">
+        <label class="label">Nombre</label>
+        <div class="control">
+          <input class="input" type="text" [formControl]="name" [ngClass]="{'is-danger': name.hasError('required') && name.touched }">
+        </div>
+        <p *ngIf="name.hasError('required') && name.touched" class="help is-danger">Este campo es requerido</p>
+      </div>
+      <div class="field">
+        <label class="label">Descripción</label>
+        <div class="control">
+          <textarea class="textarea" rows="5" [formControl]="description" [ngClass]="{'is-danger': description.hasError('required') && description.touched }"></textarea>
+        </div>
+        <p *ngIf="description.hasError('required') && description.touched" class="help is-danger">Este campo es requerido</p>
+      </div>
+      <div class="field">
+        <label class="label">Tipo</label>
+        <div class="control">
+          <div class="select all-width" [ngClass]="{'is-danger': tipo.hasError('required') && tipo.touched }">
+            <select class="all-width" [formControl]="tipo">
+              <option *ngFor="let t of tipos" [ngValue]="t.id">{{t.name}}</option>
+            </select>
+          </div>
+        </div>
+        <p *ngIf="tipo.hasError('required') && tipo.touched" class="help is-danger">Este campo es requerido</p>
+      </div>
+    </div>
+  </div>
+  <footer class="card-footer">
+    <div class="card-footer-item">
+      <div class="control">
+        <button class="button is-success is-outlined" type="submit">Grabar</button>
+      </div>
+      <div class="control">
+        <button class="button is-danger is-outlined" type="button" (click)="reset()">Cancelar</button>
+      </div>
+    </div>
+  </footer>
+</form>

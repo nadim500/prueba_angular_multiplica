@@ -1,0 +1,15 @@
+.card-footer{
+  background: whitesmoke;
+}
+
+.card-footer-item {
+  justify-content: left;
+}
+
+.card-footer-item .control:not(:last-child){
+  margin-right: 1rem;
+}
+
+.all-width{
+  width: 100%;
+}

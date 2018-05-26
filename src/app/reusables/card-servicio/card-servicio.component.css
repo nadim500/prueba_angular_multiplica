@@ -1,0 +1,13 @@
+/* CARD */
+
+.preline{
+  white-space: pre-line;
+}
+
+.card-footer{
+  background: whitesmoke;
+}
+
+.card-footer-item:not(:last-child){
+  border-right: none;
+}

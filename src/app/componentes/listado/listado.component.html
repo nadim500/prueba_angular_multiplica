@@ -1,0 +1,19 @@
+<div class="columns is-multiline">
+  <ng-container *ngIf="!servicios">
+
+  </ng-container>
+  <ng-container *ngIf="servicios">
+    <ng-container *ngIf="servicios.length == 0">
+      <div class="column">
+        <div class="content">
+          <p class="has-text-centered">Sin resultados</p>
+        </div>
+      </div>
+    </ng-container>
+    <ng-container *ngIf="servicios.length > 0">
+      <div class="column is-4" *ngFor="let servicio of servicios">
+        <app-card-servicio [servicio]="servicio" ></app-card-servicio>
+      </div>
+    </ng-container>
+  </ng-container>
+</div>

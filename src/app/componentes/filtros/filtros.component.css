@@ -1,0 +1,23 @@
+/* NAVBAR TABS */
+
+.navbar-tabs{
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.navbar-tabs .navbar-item{
+  cursor: pointer;
+  color: darkgray;
+  transition: color 0.5s ease;
+}
+
+.navbar-tabs .navbar-item.active, .navbar-tabs .navbar-item:hover{
+  color: #4a4a4a;
+  border-bottom-color: transparent;
+}
+
+@media screen and (min-width: 769px){
+  .navbar-tabs{
+    flex-direction: row;
+  }
+}

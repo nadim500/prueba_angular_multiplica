@@ -1,0 +1,7 @@
+<!-- FILTROS -->
+<div class="navbar-tabs">
+  <div class="navbar-item is-tab" *ngFor="let tipo of tipos" [ngClass]="{'active': idFiltro === tipo.id}" (click)="getByFiltro(tipo.id)" >
+    {{tipo.name}}
+  </div>
+</div>
+<!--  -->
